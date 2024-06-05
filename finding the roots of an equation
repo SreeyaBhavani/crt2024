@@ -10,8 +10,8 @@ int main()
     printf("roots are imaginary");
 }
 else{
- float r1=-b+sqrt(b*b-4*a*c)/2*a;   
-float r2=-b-sqrt(b*b-4*a*c)/2*a;
+ float r1=(-b+sqrt(b*b-4*a*c))/(2*a);   
+float r2=(-b-sqrt(b*b-4*a*c))/(2*a);
 printf("r1=%f\n r2=%f\n",r1,r2);
 }
 
