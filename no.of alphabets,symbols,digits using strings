@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+     char str1[50];
+     scanf("%[^\n]s",&str1);
+     int i,alp=0,dig=0,sym=0;
+     for(i=0;str1[i]!='\0';i++)
+     {
+         if(str1[i]>=95&&str1[i]<=90||str1[i]>=97&&str1[i]<=122)
+         alp++;
+         else if(str1[i]>=48&&str1[i]<=57)
+         dig++;
+         else
+         sym++;
+     }
+     printf("%d\n%d\n%d\n",alp,dig,sym);
+}
