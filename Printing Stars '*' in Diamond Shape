@@ -1,0 +1,88 @@
+Printing Stars '*' in Diamond Shape
+
+Input Format
+
+Read n value
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Printing Stars '*' in Diamond Shape
+
+Sample Input 0
+
+5
+Sample Output 0
+
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+Sample Input 1
+
+9
+Sample Output 1
+
+        * 
+       * * 
+      * * * 
+     * * * * 
+    * * * * * 
+   * * * * * * 
+  * * * * * * * 
+ * * * * * * * * 
+* * * * * * * * * 
+ * * * * * * * * 
+  * * * * * * * 
+   * * * * * * 
+    * * * * * 
+     * * * * 
+      * * * 
+       * * 
+        * 
+==============================================================================================
+code:
+==============================================================================================
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int i,j,n,k;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(k=i;k<n;k++)
+        {
+            printf(" ");
+        }
+         for(j=1;j<=i;j++)
+        {
+            printf("* ");
+        }
+      printf("\n");
+    }
+    for(i=n-1;i>=1;i--)
+    {
+        for(k=i;k<n-1;k++)
+        {
+        printf(" ");
+        }
+        for(j=1;j<=i;j++)
+       {
+        printf(" *");
+        }
+        printf("\n");
+       }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
