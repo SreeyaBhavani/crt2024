@@ -1,0 +1,67 @@
+An English school teacher is teaching how to build sentences for kindergarten students. She starts by teaching two words in a sentence, then 3 words and so on. The next step is that she asks the students to find which word in the sentence they have made has the maximum number of alphabets. The task here is to write program to find the longest word in each input sentence(str).
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+print the highest word length
+
+Sample Input 0
+
+Knowledge is the greatest gift
+Sample Output 0
+
+9
+Explanation 0
+
+Word No. of characters Knowledge 9 Is 2 The 3 Greatest 8 Gift 4
+
+Sample Input 1
+
+Java is object oriented programming language
+Sample Output 1
+
+11
+Sample Input 2
+
+11223##%%5566778899 Saturn V rocket���s  first stage carries 203,400 gallons (770,000 litres) of kerosene fuel
+Sample Output 2
+
+19
+==================================================================================
+code:
+==================================================================================
+ #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    char s[200];
+    scanf("%[^\n]s",s);
+    int i,no=0,cnt=0;
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]!=' '){
+             cnt++;
+        }
+        else
+        {
+            if(cnt>no)
+                no=cnt;
+            cnt=0;
+        }
+                
+    }
+    printf("%d",no);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
