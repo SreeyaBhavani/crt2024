@@ -1,0 +1,65 @@
+Printing Stars in Hollow Left Triangle Shape
+
+Input Format
+
+Read n value
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Printing Stars in Hollow Left Triangle Shape
+
+Sample Input 0
+
+5
+Sample Output 0
+
+* 
+* * 
+*   * 
+*     * 
+* * * * * 
+Sample Input 1
+
+7
+Sample Output 1
+
+* 
+* * 
+*   * 
+*     * 
+*       * 
+*         * 
+* * * * * * * 
+========================================================================================
+code:
+========================================================================================
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i,j;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+      for(j=1;j<=i;j++)
+      {
+          if(j==1||j==i||i==n)
+          {
+              printf("* ");
+          }
+          else
+          {
+              printf("  ");
+          }
+      }
+        printf("\n");
+    }
+    
+    return 0;
+}
