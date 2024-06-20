@@ -1,0 +1,77 @@
+Write a program to find the element of maximum value in each row.
+
+Input Format
+
+The first input corresponds to the number of rows. The second input corresponds to the number of columns. The third input corresponds to the elements of the 2D array.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+The output corresponds to the maximum element in each row.
+
+Sample Input 0
+
+3
+3
+1 4 9
+3 5 1
+2 8 5
+Sample Output 0
+
+9
+5
+8
+Sample Input 1
+
+4
+3
+8 1 7
+3 4 5
+6 9 3
+2 2 2
+Sample Output 1
+
+8
+5
+9
+2
+=======================================================================================
+code:
+=======================================================================================
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,m;
+    scanf("%d%d",&n,&m);
+    int a[n][m],i,j;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            scanf("%d",&a[i][j]);
+                  
+        }
+    }
+    for(i=0;i<n;i++)
+    {  
+        int max=0;
+        for(j=0;j<m;j++)
+        {
+            if(a[i][j]>max)
+            {
+                max=a[i][j];
+               
+            }
+        }
+        printf("%d\n",max); 
+    }
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
